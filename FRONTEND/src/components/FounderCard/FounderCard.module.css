@@ -1,0 +1,9 @@
+.card { background:#fff; border:1px solid #CBD5E1; border-radius:20px; padding:36px; box-shadow:0 4px 24px rgba(10,22,40,0.08); transition:all 0.25s; display:flex; flex-direction:column; gap:20px; }
+.card:hover { box-shadow:0 12px 48px rgba(10,22,40,0.14); transform:translateY(-4px); border-color:#3B82F6; }
+.avatar { width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,#0A1628,#1A56DB); display:flex; align-items:center; justify-content:center; }
+.avatar span { font-family:'Playfair Display',Georgia,serif; font-size:22px; font-weight:900; color:#fff; }
+.roleTag { display:inline-block; background:#EFF6FF; color:#1A56DB; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:4px 12px; border-radius:50px; margin-bottom:6px; }
+.name { font-family:'Playfair Display',Georgia,serif; font-size:24px; font-weight:700; color:#0A1628; margin-bottom:4px; }
+.focus { font-size:13px; font-weight:600; color:#1A56DB; margin-bottom:4px; }
+.bio { font-size:14px; color:#64748B; line-height:1.75; margin-bottom:8px; }
+.bio:last-child { margin-bottom:0; }

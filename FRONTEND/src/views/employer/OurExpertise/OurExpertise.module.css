@@ -1,0 +1,4 @@
+.section { padding:100px 24px; background:#F8FAFC; }
+.container { max-width:1160px; margin:0 auto; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+@media(max-width:768px) { .grid { grid-template-columns:1fr; } }

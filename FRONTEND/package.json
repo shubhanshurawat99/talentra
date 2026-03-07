@@ -1,0 +1,37 @@
+{
+  "name": "talentra",
+  "version": "1.0.0",
+  "description": "Talentra — Recruitment Platform built with React MVC Architecture",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.0",
+    "react-scripts": "5.0.1",
+    "vite": "^7.3.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "vite",
+    "build": "vite build",
+    "build:cra": "react-scripts build",
+    "preview": "vite preview",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.4"
+  }
+}

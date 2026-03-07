@@ -1,0 +1,13 @@
+.hero { background:linear-gradient(135deg,#0A1628 0%,#0E2147 100%); padding:100px 24px 120px; text-align:center; position:relative; overflow:hidden; }
+.overlay { position:absolute; inset:0; background-image:radial-gradient(circle at 20% 50%,rgba(26,86,219,0.15) 0%,transparent 60%),radial-gradient(circle at 80% 20%,rgba(59,130,246,0.1) 0%,transparent 50%); }
+.content { position:relative; z-index:1; max-width:800px; margin:0 auto; }
+.badge { display:inline-block; background:rgba(26,86,219,0.3); border:1px solid rgba(59,130,246,0.4); color:#93C5FD; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:5px 18px; border-radius:50px; margin-bottom:24px; }
+.hero h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(36px,5vw,64px); font-weight:900; color:#fff; line-height:1.1; margin-bottom:20px; }
+.hero h1 em { font-style:normal; color:#3B82F6; }
+.hero p { font-size:clamp(15px,2vw,18px); color:rgba(255,255,255,0.65); max-width:520px; margin:0 auto 40px; }
+.cta { display:inline-flex; align-items:center; padding:14px 36px; background:#fff; color:#0A1628; border-radius:50px; font-weight:700; font-size:15px; text-decoration:none; transition:all 0.25s; }
+.cta:hover { background:#F1F5F9; transform:translateY(-2px); }
+.stats { display:flex; gap:32px; justify-content:center; flex-wrap:wrap; margin-top:72px; }
+.stat { text-align:center; padding:20px 32px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; min-width:140px; }
+.statVal { font-family:'Playfair Display',Georgia,serif; font-size:36px; font-weight:900; color:#3B82F6; }
+.statLabel { font-size:12px; color:rgba(255,255,255,0.5); margin-top:4px; letter-spacing:0.5px; }

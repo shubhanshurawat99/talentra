@@ -1,0 +1,27 @@
+/* ─────────────────────────────────────────────────────────
+   GLOBAL STYLES — Talentra
+   Import Google Fonts, resets, and base typography here.
+   ───────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #fff;
+  color: #0A1628;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F1F5F9; }
+::-webkit-scrollbar-thumb { background: #1A56DB; border-radius: 3px; }
+
+button, input, select, textarea { font-family: 'DM Sans', sans-serif; }
+
+a { color: inherit; }

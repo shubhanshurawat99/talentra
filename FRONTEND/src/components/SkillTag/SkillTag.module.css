@@ -1,0 +1,2 @@
+.tag { display:inline-flex; align-items:center; gap:6px; background:#EFF6FF; color:#1A56DB; font-size:13px; font-weight:500; padding:4px 12px; border-radius:50px; }
+.tag button { background:none; border:none; cursor:pointer; color:#1A56DB; font-size:16px; line-height:1; padding:0; }

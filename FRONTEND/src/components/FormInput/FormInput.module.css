@@ -1,0 +1,15 @@
+.group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+.label { font-size: 13px; font-weight: 600; color: #334155; letter-spacing: 0.3px; }
+.req { color: #1A56DB; }
+.control {
+  width: 100%; padding: 13px 16px;
+  background: #F8FAFC; border: 1.5px solid #CBD5E1;
+  border-radius: 12px;
+  font-family: 'DM Sans', sans-serif; font-size: 14px; color: #0A1628;
+  outline: none; transition: all 0.25s;
+  appearance: none;
+}
+.control:focus { border-color: #1A56DB; background: #fff; box-shadow: 0 0 0 3px rgba(26,86,219,0.12); }
+.control.error { border-color: #EF4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.1); }
+textarea.control { resize: vertical; min-height: 120px; }
+.errMsg { font-size: 12px; color: #EF4444; font-weight: 500; }
