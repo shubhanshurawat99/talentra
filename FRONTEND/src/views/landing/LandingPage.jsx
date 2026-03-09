@@ -24,7 +24,7 @@ export default function LandingPage() {
       <div className={styles.content}>
         <div className={styles.eyebrow}>
           <span className={styles.line}></span>
-          Recruitment Reimagined
+          Consultancy
           <span className={styles.line}></span>
         </div>
 

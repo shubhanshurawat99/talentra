@@ -10,7 +10,7 @@ export const COMPANY = {
 
   
   hours: 'Mon – Sat, 9:00 AM – 6:00 PM IST',
-  copyright: '© 2026 Talentra Recruitment Consultancy. All rights reserved.',
+  copyright: '© 2024 GuideMyWay. All rights reserved.',
 };
 
 export const ABOUT = {
@@ -75,7 +75,7 @@ export const TEAM_OVERVIEW = {
 export const FOUNDERS = [
   {
     initials: 'HB',
-    name: 'Harshit Bhandula',
+    name: 'Harshit and COO',
     role: 'Co-Founder',
     focus: 'Strategy Consulting & Leadership Hiring',
     bio: [
@@ -87,13 +87,37 @@ export const FOUNDERS = [
   {
     initials: 'PS',
     name: 'Pratyush Sharma',
-    role: 'Co-Founder',
+    role: 'Co-Founder and CEO',
     focus: 'Technology Hiring & Candidate Strategy',
     bio: [
       'Pratyush brings a strong technology background and deep understanding of the developer ecosystem. With experience working in a global fintech environment, he focuses on identifying high-quality engineering talent and aligning candidates with the technical and cultural needs of fast-growing teams.',
       'At Talentra, he leads candidate strategy, technical screening, and client collaboration for technology roles.',
     ],
   },
+  {
+  initials: 'K',
+  name: 'Komal ',
+  role: 'Strategy Consulting & Leadership Hiring',
+  focus: 'Executive Search & Talent Strategy',
+  bio: [
+    'Komal brings diverse experience across recruitment, corporate environments, and consulting. With strong exposure to both client-side operations and advisory roles, she has developed a deep understanding of evolving talent needs across industries.',
+    'She specializes in strategy consulting and leadership hiring, partnering with organizations to identify and place high-impact professionals in critical roles.',
+    'By aligning talent strategies with business objectives, Komal focuses on delivering professionals who can drive meaningful impact and measurable growth.',
+    'With a combination of industry knowledge, recruitment expertise, and a relationship-driven approach, she is committed to helping organizations build strong, high-performing teams.',
+  ],
+},
+{
+  initials: 'SR',
+  name: 'Shubhanshu Rawat',
+  role: 'Technical Head',
+  focus: 'Platform Development & AI Engineering',
+  bio: [
+    'Shubhanshu leads the technical vision and development of the platform, ensuring scalable architecture and high-performance systems.',
+    'With a strong background in software development, machine learning, and backend engineering, he focuses on building intelligent products that solve real-world problems.',
+    'At Talentra, he is responsible for designing system architecture, implementing advanced AI-driven features, and ensuring the reliability and efficiency of the technology stack.',
+    'He is passionate about leveraging modern technologies to build innovative solutions and drive continuous technical improvement.'
+  ],
+}
 ];
 
 export const EXPERTISE_AREAS = [
