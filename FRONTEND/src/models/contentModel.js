@@ -74,8 +74,22 @@ export const TEAM_OVERVIEW = {
 
 export const FOUNDERS = [
   {
+    initials: 'PS',
+    name: 'Pratyush Sharma',
+    role: 'Co-Founder and CEO',
+    focus: 'Technology Hiring & Candidate Strategy',
+    bio: [
+      'Pratyush Sharma is the Co-Founder and Chief Executive Officer of Talentra. He leads the company’s vision of building a focused and reliable talent solutions partner for fast-growing technology companies.',
+'With a strong background in technology and a deep understanding of the developer ecosystem, Pratyush brings a unique perspective to recruitment,bridging the gap between technical teams and the talent they need to grow. His approach emphasizes quality sourcing, structured screening, and building long-term partnerships with both clients and candidates.',
+
+'At Talentra, he oversees strategy, client partnerships, and the development of scalable recruitment processes aimed at helping startups and product teams hire the right talent efficiently.',
+
+'Pratyush believes that successful hiring is not just about filling roles, but about connecting the right people with opportunities where they can truly create impact.'
+    ],
+  },
+  {
     initials: 'HB',
-    name: 'Harshit and COO',
+    name: 'Harshit',
     role: 'Co-Founder',
     focus: 'Strategy Consulting & Leadership Hiring',
     bio: [
@@ -84,16 +98,7 @@ export const FOUNDERS = [
       "With diverse cross-industry exposure and a strong background in business development, I am now launching this recruitment venture with a clear vision—to connect the right talent with the right opportunities and help organizations build high-performing teams that drive long-term success.",
     ],
   },
-  {
-    initials: 'PS',
-    name: 'Pratyush Sharma',
-    role: 'Co-Founder and CEO',
-    focus: 'Technology Hiring & Candidate Strategy',
-    bio: [
-      'Pratyush brings a strong technology background and deep understanding of the developer ecosystem. With experience working in a global fintech environment, he focuses on identifying high-quality engineering talent and aligning candidates with the technical and cultural needs of fast-growing teams.',
-      'At Talentra, he leads candidate strategy, technical screening, and client collaboration for technology roles.',
-    ],
-  },
+  
   {
   initials: 'K',
   name: 'Komal ',
