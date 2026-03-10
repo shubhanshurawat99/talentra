@@ -6,6 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import styles from './Navbar.module.css';
+import logo from '../../asset/logo.png';
 
 export default function Navbar({ links = [], showBack = false }) {
   const navigate = useNavigate();
@@ -24,7 +25,12 @@ export default function Navbar({ links = [], showBack = false }) {
 
         {/* Brand */}
         <Link to="/" className={styles.brand}>
-          Talen<span>tra</span>
+          <img 
+            src={logo} 
+            alt="Talentra Logo" 
+            className={styles.brandLogo}
+          />
+          <span>Talen<span style={{ color: '#1A56DB' }}>tra</span></span>
         </Link>
 
         {/* Desktop nav links */}

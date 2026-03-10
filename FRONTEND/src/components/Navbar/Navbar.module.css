@@ -20,8 +20,23 @@
   font-size: 26px; font-weight: 900;
   color: #0A1628; text-decoration: none;
   letter-spacing: -0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
-.brand span { color: #1A56DB; }
+
+.brandLogo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(26, 86, 219, 0.2);
+  box-shadow: 0 2px 8px rgba(26, 86, 219, 0.1);
+}
+
+.brand span {
+  color: #0A1628;
+}
 
 .navList {
   display: flex; align-items: center; gap: 4px;

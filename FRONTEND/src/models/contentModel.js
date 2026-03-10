@@ -10,6 +10,7 @@ export const COMPANY = {
 
   
   hours: 'Mon – Sat, 9:00 AM – 6:00 PM IST',
+  call: '9811124156 , 7838815059',
   copyright: '© 2024 GuideMyWay. All rights reserved.',
 };
 
@@ -88,9 +89,9 @@ export const FOUNDERS = [
     ],
   },
   {
-    initials: 'HB',
+    initials: 'H',
     name: 'Harshit',
-    role: 'Co-Founder',
+    role: 'Co-Founder AND COO',
     focus: 'Strategy Consulting & Leadership Hiring',
     bio: [
       'After completing my B.Tech, I began my career in the EdTech industry as a Business Development Manager, where I developed strong expertise in sales, client relationships, and growth strategy. Over the next several years, I progressed into leadership roles, gaining valuable experience in team management, business expansion, and market development.',
@@ -102,7 +103,7 @@ export const FOUNDERS = [
   {
   initials: 'K',
   name: 'Komal ',
-  role: 'Strategy Consulting & Leadership Hiring',
+  role: 'Delivery Head',
   focus: 'Executive Search & Talent Strategy',
   bio: [
     'Komal brings diverse experience across recruitment, corporate environments, and consulting. With strong exposure to both client-side operations and advisory roles, she has developed a deep understanding of evolving talent needs across industries.',

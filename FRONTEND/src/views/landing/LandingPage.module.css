@@ -15,7 +15,31 @@
 .eyebrow { display:flex; align-items:center; justify-content:center; gap:12px; font-size:11px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#93C5FD; margin-bottom:24px; }
 .line { width:40px; height:1px; background:rgba(147,197,253,0.4); }
 
-.logo { font-family:'Playfair Display',Georgia,serif; font-size:clamp(64px,12vw,108px); font-weight:900; color:#fff; line-height:1; margin-bottom:20px; letter-spacing:-2px; }
+.logoContainer { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.logoCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.2);
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.logo { font-family:'Playfair Display',Georgia,serif; font-size:clamp(64px,12vw,108px); font-weight:900; color:#fff; line-height:1; margin-bottom:0; letter-spacing:-2px; }
 .logo span { color:#3B82F6; }
 
 .tagline { font-size:clamp(16px,2vw,19px); color:rgba(255,255,255,0.6); font-weight:300; max-width:500px; margin:0 auto 60px; line-height:1.65; }

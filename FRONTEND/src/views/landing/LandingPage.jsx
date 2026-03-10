@@ -7,6 +7,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { COMPANY } from '../../models/contentModel';
 import styles from './LandingPage.module.css';
+import logo from '../../asset/logo.png';
+
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -22,15 +24,21 @@ export default function LandingPage() {
       <div className={styles.grid}></div>
 
       <div className={styles.content}>
+        <div className={styles.logoContainer}>
+          <img 
+            src={logo} 
+            alt="Company Logo" 
+            className={styles.logoCircle}
+          />
+          <h1 className={styles.logo}>
+            Talen<span>tra</span>
+          </h1>
+        </div>
         <div className={styles.eyebrow}>
           <span className={styles.line}></span>
           Consultancy
           <span className={styles.line}></span>
         </div>
-
-        <h1 className={styles.logo}>
-          Talen<span>tra</span>
-        </h1>
         <p className={styles.tagline}>{COMPANY.tagline}</p>
 
         <div className={styles.cards}>
