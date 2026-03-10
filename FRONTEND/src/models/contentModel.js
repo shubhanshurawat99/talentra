@@ -8,7 +8,7 @@ export const COMPANY = {
   name: 'Talentra',
   tagline: 'Connecting Great Talent with Great Teams',
 
-  
+
   hours: 'Mon – Sat, 9:00 AM – 6:00 PM IST',
   call: '9811124156 , 7838815059',
   copyright: '© 2024 GuideMyWay. All rights reserved.',
