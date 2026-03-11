@@ -27,12 +27,15 @@ const recruiterSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
+  candidates: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Candidate'
+  }],
   status: {
     type: String,
     enum: ['pending', 'contacted', 'closed'],
     default: 'pending'
   }
 }, { timestamps: true });
-
 
 module.exports = mongoose.model('Recruiter', recruiterSchema);

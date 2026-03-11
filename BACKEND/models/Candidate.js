@@ -46,6 +46,11 @@ const candidateSchema = new mongoose.Schema({
     type: String,
     trim: true
   },
+  recruiters: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Recruiter',
+    default: null
+  }],
   status: {
     type: String,
     enum: ['pending', 'reviewed', 'shortlisted', 'rejected'],
@@ -53,7 +58,5 @@ const candidateSchema = new mongoose.Schema({
   }
  
 }, { timestamps: true });
-
-
 
 module.exports = mongoose.model('Candidate', candidateSchema);
