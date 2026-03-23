@@ -1,6 +1,5 @@
 const Recruiter = require('../models/Recruiter');
 
-const { addRecruiterEmailJob } = require('../services/emailQueue');
 
 const recruiterController = {
   async createRecruiter(req, res) {
@@ -16,8 +15,7 @@ const recruiterController = {
       
       console.log('Recruiter data received:', recruiterData);
       
-      // Send email notification
-      await addRecruiterEmailJob(recruiterData, process.env.ADMIN_EMAIL);
+     
       
       res.status(201).json({
         success: true,

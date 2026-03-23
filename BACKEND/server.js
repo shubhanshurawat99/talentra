@@ -1,6 +1,5 @@
 const dotenv = require('dotenv')
 dotenv.config();
-const { emailQueue } = require('./services/emailQueue');
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -46,31 +45,7 @@ app.get('/api/health', (req, res) => {
 
 app.use('/api/candidates', candidateRoutes);
 app.use('/api/recruiters', recruiterRoutes);
-app.post('/api/send-email', async (req, res) => {
-  try {
-    const { type, data, adminEmail } = req.body;
-    
-    if (!type || !data || !adminEmail) {
-      return res.status(400).json({ 
-        success: false, 
-        message: 'Missing required fields' 
-      });
-    }
-    
-    const emailJob = emailQueue.add('send-recruiter-email', { data, adminEmail });
-    
-    res.json({ 
-      success: true, 
-      message: 'Email queued successfully',
-      jobId: emailJob.id 
-    });
-  } catch (error) {
-    res.status(500).json({ 
-      success: false, 
-      message: error.message 
-    });
-  }
-});
+
 
 app.use('*', (req, res) => {
   res.status(404).json({ 
