@@ -3,7 +3,7 @@
 // Business logic for the Candidate submission form.
 // Connects CandidateModel validation to View state.
 // ─────────────────────────────────────────────────────────
-import { api } from '../config/api';
+import { API_BASE_URL } from '../config/api';
 import { useState, useCallback } from 'react';
 import { createCandidate, validateCandidate } from '../models/candidateModel';
 
@@ -80,7 +80,20 @@ export function useCandidateController() {
     setLoading(true);
     
     try {
-      const data = await api.postCandidate({ ...fields, skills, resumeLink });
+      const response = await fetch(`${API_BASE_URL}/candidates`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...fields, skills, resumeLink }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error('Backend validation error:', errorData);
+        throw new Error(errorData.message || 'Failed to submit application');
+      }
+
       setSubmitted(true);
     } catch (error) {
       console.error('Error submitting application:', error);
