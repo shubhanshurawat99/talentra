@@ -2,7 +2,7 @@
 // CONTROLLER: recruiterController.js
 // Business logic for the Employer Contact form.
 // ─────────────────────────────────────────────────────────
-import { API_BASE_URL } from '../config/api';
+import { api } from '../config/api';
 import { useState, useCallback } from 'react';
 import { createRecruiter, validateRecruiter } from '../models/recruiterModel';
 
@@ -23,42 +23,30 @@ export function useRecruiterController() {
     setErrors(prev => ({ ...prev, [name]: '' }));
   }, []);
 
-  const handleSubmit = useCallback(async (e) => {
-    e.preventDefault();
-    const recruiter = createRecruiter(fields);
-    const validationErrors = validateRecruiter(recruiter);
+ const handleSubmit = useCallback(async (e) => {
+  e.preventDefault();
 
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
+  const recruiter = createRecruiter(fields);
+  const validationErrors = validateRecruiter(recruiter);
 
-    setLoading(true);
-    
-    try {
-      const response = await fetch(`${API_BASE_URL}/recruiters`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(recruiter),
-      });
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors);
+    return;
+  }
 
-      if (!response.ok) {
-        throw new Error('Failed to submit form');
-      }
+  setLoading(true);
 
-      const data = await response.json();
-      console.log('Form submitted successfully:', data);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setErrors({ submit: 'Failed to submit form. Please try again.' });
-      return;
-    }
-    
-    setLoading(false);
+  try {
+    const data = await api.postRecruiter(fields);
+    console.log('Form submitted successfully:', data);
     setSubmitted(true);
-  }, [fields]);
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    setErrors({ submit: 'Failed to submit form. Please try again.' });
+  } finally {
+    setLoading(false);
+  }
+}, [fields]);
 
   const handleReset = useCallback(() => {
     setFields({ company: '', contactPerson: '', email: '', phone: '', message: '' });
