@@ -32,6 +32,7 @@ export default function ContactUs() {
              
               <div className={styles.detail}><span className={styles.detailIcon}>🕐</span><span>{COMPANY.hours}</span></div>
               <div className={styles.detail}><span className={styles.detailIcon}>📞</span><span>{COMPANY.call}</span></div>
+              <div className={styles.detail}><span className={styles.detailIcon}>📧</span><span>{COMPANY.email}</span></div>
             </div>
           </div>
 
