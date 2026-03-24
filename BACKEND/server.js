@@ -28,7 +28,12 @@ const limiter = rateLimit({
 app.use('/api/', limiter);
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: [
+    'http://localhost:3000',          // local frontend
+    'http://localhost:5173',          // Vite default
+    'https://www.talentra.co.in', // deployed frontend
+    'https://talentra-1.onrender.com'
+  ],
   credentials: true
 }));
 
