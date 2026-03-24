@@ -2,7 +2,7 @@
 // CONTROLLER: recruiterController.js
 // Business logic for the Employer Contact form.
 // ─────────────────────────────────────────────────────────
-import { API_BASE_URL } from '../config/api';
+import API_BASE_URL from '../config/api';
 import { useState, useCallback } from 'react';
 import { createRecruiter, validateRecruiter } from '../models/recruiterModel';
 
@@ -23,42 +23,43 @@ export function useRecruiterController() {
     setErrors(prev => ({ ...prev, [name]: '' }));
   }, []);
 
-  const handleSubmit = useCallback(async (e) => {
-    e.preventDefault();
-    const recruiter = createRecruiter(fields);
-    const validationErrors = validateRecruiter(recruiter);
+const handleSubmit = useCallback(async (e) => {
+  e.preventDefault();
 
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
+  const recruiter = createRecruiter(fields);
+  const validationErrors = validateRecruiter(recruiter);
+
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors);
+    return;
+  }
+
+  setLoading(true);
+
+  try {
+    const response = await fetch(`${API_BASE_URL}/recruiters`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(fields), // ✅ FIXED
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error('Backend error:', errorData);
+      throw new Error(errorData.message || 'Failed to submit form');
     }
 
-    setLoading(true);
-    
-    try {
-      const response = await fetch(`${API_BASE_URL}/recruiters`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(recruiter),
-      });
+    const data = await response.json();
+    console.log('Form submitted successfully:', data);
 
-      if (!response.ok) {
-        throw new Error('Failed to submit form');
-      }
-
-      const data = await response.json();
-      console.log('Form submitted successfully:', data);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setErrors({ submit: 'Failed to submit form. Please try again.' });
-      return;
-    }
-    
-    setLoading(false);
     setSubmitted(true);
-  }, [fields]);
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    setErrors({ submit: 'Failed to submit form. Please try again.' });
+  } finally {
+    setLoading(false);
+  }
+}, [fields]);
 
   const handleReset = useCallback(() => {
     setFields({ company: '', contactPerson: '', email: '', phone: '', message: '' });

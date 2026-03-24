@@ -3,7 +3,7 @@
 // Business logic for the Candidate submission form.
 // Connects CandidateModel validation to View state.
 // ─────────────────────────────────────────────────────────
-import { API_BASE_URL } from '../config/api';
+import API_BASE_URL from '../config/api';
 import { useState, useCallback } from 'react';
 import { createCandidate, validateCandidate } from '../models/candidateModel';
 
